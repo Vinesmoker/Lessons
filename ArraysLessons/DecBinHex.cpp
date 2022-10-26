@@ -2,7 +2,7 @@
 using namespace std;
 
 //#define DEC_TO_BIN
-//#define DEC_TO_HEX
+#define DEC_TO_HEX_FOR_SWITCH
 
 void main ()
 {
@@ -20,7 +20,7 @@ void main ()
     cout << bin << endl;
 #endif // DEC_TO_BIN
 
-#ifdef DEC_TO_HEX
+#ifdef DEC_TO_HEX_FOR_SWITCH
     int dec;
     cout << "Введите десятичное число: "; cin >> dec;
     cout << dec << endl;
@@ -33,6 +33,7 @@ void main ()
     }
     for (--i; i >= 0; --i)
     {
+        /*
         switch (hex[i])
         {
         case 10:cout << "A"; break;
@@ -43,9 +44,12 @@ void main ()
         case 15:cout << "F"; break;
         default:cout << hex[i];
         }
+        */
+
+        if (hex[i] < 10)cout << hex[i];
+        else cout << char(hex[i] + 55);
     }
     cout << endl;
-#endif // DEC_TO_HEX
-
+#endif // DEC_TO_HEX_FOR_SWITC
 
 }
