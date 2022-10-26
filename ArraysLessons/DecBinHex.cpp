@@ -25,11 +25,11 @@ void main ()
     cout << "Введите десятичное число: "; cin >> dec;
     cout << dec << endl;
     const int n = 8;
-    int hex[n] = {}; // Этот массив будет хранить HEX
+    char hex[n] = {}; // Этот массив будет хранить HEX
     int i = 0;
     for (; dec; dec /= 16, i++)
     {
-        hex[i] = dec % 16;
+        hex[i] = dec % 16; 
     }
     for (--i; i >= 0; --i)
     {
@@ -46,10 +46,12 @@ void main ()
         }
         */
 
-        if (hex[i] < 10)cout << hex[i];
-        else cout << char(hex[i] + 55);
+        //if (hex[i] < 10)cout << hex[i]; else cout << char(hex[i] + 55);
+        //(hex[i] < 10) ? cout << hex[i] : cout << char(hex[i] + 55);
+        //cout << char(hex[i] < 10 ? hex[i] + 48 : hex[i] + 55);
+        //cout << char(hex[i] + (hex[i] < 10 ? 48 : 55));
+        hex[i] += hex[i] < 10 ? 48 : 55; cout << hex[i];
     }
     cout << endl;
 #endif // DEC_TO_HEX_FOR_SWITCH
-
 }
