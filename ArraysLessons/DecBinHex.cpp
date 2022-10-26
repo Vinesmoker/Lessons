@@ -50,6 +50,6 @@ void main ()
         else cout << char(hex[i] + 55);
     }
     cout << endl;
-#endif // DEC_TO_HEX_FOR_SWITC
+#endif // DEC_TO_HEX_FOR_SWITCH
 
 }
