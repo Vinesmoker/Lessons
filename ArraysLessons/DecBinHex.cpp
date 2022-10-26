@@ -2,12 +2,12 @@
 using namespace std;
 
 //#define DEC_TO_BIN
+//#define DEC_TO_HEX
 
 void main ()
 {
 	setlocale(LC_ALL, "");
 
-    // Из DEC в BIN
 #ifdef DEC_TO_BIN
     int dec; int bin = 0; int buff = 1;
     cout << "Введите десятичное число: "; cin >> dec;
@@ -20,9 +20,7 @@ void main ()
     cout << bin << endl;
 #endif // DEC_TO_BIN
 
-
-    // Из DEC в HEX
-
+#ifdef DEC_TO_HEX
     int dec;
     cout << "Введите десятичное число: "; cin >> dec;
     cout << dec << endl;
@@ -33,10 +31,21 @@ void main ()
     {
         hex[i] = dec % 16;
     }
-    for ( --i; i >= 0; --i)
+    for (--i; i >= 0; --i)
     {
-        cout << hex[i];
+        switch (hex[i])
+        {
+        case 10:cout << "A"; break;
+        case 11:cout << "B"; break;
+        case 12:cout << "C"; break;
+        case 13:cout << "D"; break;
+        case 14:cout << "E"; break;
+        case 15:cout << "F"; break;
+        default:cout << hex[i];
+        }
     }
     cout << endl;
+#endif // DEC_TO_HEX
+
 
 }
