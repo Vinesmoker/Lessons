@@ -2,7 +2,7 @@
 using namespace std;
 
 //#define DEC_TO_BIN
-#define DEC_TO_HEX_FOR_SWITCH
+//#define DEC_TO_HEX_FOR_SWITCH
 
 void main ()
 {
