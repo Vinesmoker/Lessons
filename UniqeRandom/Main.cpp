@@ -15,7 +15,7 @@ void main ()
 	for (int i = 0; i < n;)
 	{
 		random = false;
-		int ranVal = minLim + rand() % (maxLim - minLim);
+		int ranVal = (minLim) + rand() % ((maxLim + 1) - minLim);
 		for (int j = 0; j < i; j++)
 		{
 			if (arr[j] == ranVal)
@@ -29,10 +29,6 @@ void main ()
 			arr[i] = ranVal; i++;
 		}
 	}
-
-
-
-
 	for (int i = 0; i < n; i++)
 	{
 		cout << arr[i] << "\t";
